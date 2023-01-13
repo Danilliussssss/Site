@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"/>
+
+    <title>Конструктор устройств</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body style=»background-color: #55D52B»>
+
+<style>
+    .ForLeft {
+        display: table;
+    }
+
+    .ForLeft b {
+        display: inline-block;
+        text-align: left;
+    }
+</style>
+<style>
+    .ForCenter {
+        display: inline-block;;
+        margin: auto;
+
+    }
+
+    .ForCenter a {
+        display: inline-block;
+        padding: 2px;
+        text-align: center;
+
+    }
+
+    .LabelName {
+        position: absolute;
+        bottom: 880px;
+        left: 100px;
+    }
+
+    .ButtonName {
+        position: absolute;
+        bottom: 850px;
+        left: 100px;
+    }
+
+    .MyButton {
+        position: absolute;
+        bottom: 850px;
+        left: 100px;
+    }
+
+    .LabelMAh {
+        position: absolute;
+        bottom: 820px;
+        left: 100px;
+
+    }
+
+    .ButtonMAh {
+        position: absolute;
+        bottom: 790px;
+        left: 100px;
+    }
+
+    .LabelTypeScreen {
+        position: absolute;
+        bottom: 760px;
+        left: 100px;
+
+    }
+
+    .ButtonTypeScreen {
+        position: absolute;
+        bottom: 730px;
+        left: 100px;
+    }
+
+    .LabelHz {
+        position: absolute;
+        bottom: 700px;
+        left: 100px;
+
+    }
+
+    .ButtonHz {
+        position: absolute;
+        bottom: 670px;
+        left: 100px;
+    }
+
+    .LabelNameProcessor {
+        position: absolute;
+        bottom: 640px;
+        left: 100px;
+
+    }
+
+    .ButtonNameProcessor {
+        position: absolute;
+        bottom: 610px;
+        left: 100px;
+    }
+
+    .LabelGHz {
+        position: absolute;
+        bottom: 580px;
+        left: 100px;
+
+    }
+
+    .ButtonGHz {
+        position: absolute;
+        bottom: 550px;
+        left: 100px;
+    }
+
+    .ButtonCreate {
+        position: absolute;
+        bottom: 510px;
+        left: 150px;
+    }
+
+    .EnterBackground {
+        position: absolute;
+        bottom: 400px;
+        left: 50px;
+    }
+
+    .image {
+        position: relative;
+        width: 100%; /* for IE 6 */
+    }
+
+    }</style>
+
+<header>
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <nav class="container d-flex flex-column flex-md-row justify-content-between">
+            </nav>
+            <a href="/" class="navbar-brand d-flex align-items-center"><b class="py-2 d-none d-md-inline-block" href="/"
+                                                                          target="_blank">Назад</b>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="5" fill="none" stroke="currentColor"
+                     stroke-linecap="round" stroke-linejoin="round" stroke-width="3" aria-hidden="false" class="me-2"
+                     viewBox="0 0 48 48">\
+                </svg>
+                </style>
+            </a>
+        </div>
+    </div>
+</header>
+<style>
+    .container {
+        position: relative;
+        text-align: center;
+        color: white;
+    }</style>
+
+<div class="image"><img th:src="@{img/color-burst-splash-blue-black-background-macos-sierra-stock-5120x2880-1328.jpg}"
+                        alt=""/></div>
+
+<div class="container mb-5">
+    <div class="EnterBackground"><img th:src="@{img/Enter.png}" alt=""/></div>
+    <form action="/EnterSmart" method="post">
+
+        <div class="ButtonName">
+            <input type="text" name="name" placeholder="Название смартфона" class="form-control"/>
+        </div>
+
+        <div class="ButtonMAh">
+            <input type="text" name="mAh" placeholder="Объём батареи" class="form-control"/>
+        </div>
+
+        <div class="ButtonTypeScreen">
+            <input type="text" name="TypeScreen" placeholder="Тип Экрана" class="form-control"/>
+        </div>
+
+        <div class="ButtonHz">
+            <input type="text" name="Hz" placeholder="Частота обновления" class="form-control"/>
+        </div>
+
+        <div class="ButtonNameProcessor"><input type="text" name="ProcessorName" placeholder="Название процессора"
+                                                class="form-control"/>
+        </div>
+        <div class="ButtonGHz">
+            <input type="text" name="GHz" placeholder="Частота ядра" class="form-control"/>
+        </div>
+
+        <div class="ButtonCreate">
+            <button type="submit" class="btn btn-success ">Создать</button>
+        </div>
+    </form>
+</div>
+</body>

@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+
+<style>
+    .ForLeft {
+        display: table;
+    }
+
+    .ForLeft b {
+        display: inline-block;
+        text-align: left;
+    }
+
+    .ForCenter {
+        display: inline-block;;
+        margin: auto;
+
+    }
+
+    .ForCenter a {
+        display: inline-block;
+        padding: 2px;
+        text-align: center;
+
+    }
+
+    .LabelName {
+        position: absolute;
+        bottom: 880px;
+        left: 100px;
+    }
+
+    .ButtonName {
+        position: absolute;
+        bottom: 850px;
+        left: 100px;
+    }
+
+    .LabelMAh {
+        position: absolute;
+        bottom: 820px;
+        left: 100px;
+
+    }
+
+    .ButtonMAh {
+        position: absolute;
+        bottom: 790px;
+        left: 100px;
+    }
+
+    .LabelTypeScreen {
+        position: absolute;
+        bottom: 760px;
+        left: 100px;
+
+    }
+
+    .ButtonTypeScreen {
+        position: absolute;
+        bottom: 730px;
+        left: 100px;
+    }
+
+    .LabelHz {
+        position: absolute;
+        bottom: 700px;
+        left: 100px;
+
+    }
+
+    .ButtonHz {
+        position: absolute;
+        bottom: 670px;
+        left: 100px;
+    }
+
+    .LabelNameProcessor {
+        position: absolute;
+        bottom: 640px;
+        left: 100px;
+
+    }
+
+    .ButtonNameProcessor {
+        position: absolute;
+        bottom: 610px;
+        left: 100px;
+    }
+
+    .LabelGHz {
+        position: absolute;
+        bottom: 580px;
+        left: 100px;
+
+    }
+
+    .ButtonGHz {
+        position: absolute;
+        bottom: 550px;
+        left: 100px;
+    }
+
+    .Possition {
+        /* background: aqua;*/
+        margin-left: 30%;
+        margin-bottom: -10%;
+        color: white;
+        width: 300px;
+        border-bottom: aqua;
+        border-width: 2px;
+        text-align: center;
+
+    }
+
+
+</style>
+
+<header>
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <nav class="container d-flex flex-column flex-md-row justify-content-between">
+            </nav>
+            <a href="/" class="navbar-brand d-flex align-items-center"><b class="py-2 d-none d-md-inline-block"
+                                                                          href="/MainMenu" target="_blank"><font
+                    align="left" color="white">Конструктор гаджетов</font></b>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="5" fill="none" stroke="currentColor"
+                     stroke-linecap="round" stroke-linejoin="round" stroke-width="3" aria-hidden="false" class="me-2"
+                     viewBox="0 0 48 48">\
+                </svg>
+                <div class="ForCenter">
+                    <justify>
+                        <a class="py-2 d-none d-md-inline-block" href="/EnterSmart" target="_blank"><font color="white">Смартфоны</font>
+                        </a>
+                        <a class="py-2 d-none d-md-inline-block" href="/EnterHead" target="_blank"><font color="white">Наушники</font></a>
+                        <a class="py-2 d-none d-md-inline-block" href="EnterNotebook" target="_blank"><font
+                                color="white">Ноутбуки</font></a>
+                    </justify>
+                </div>
+                </style>
+
+            </a>
+        </div>
+    </div>
+</header>
+
+
+<img th:src="@{img/color-burst-splash-blue-black-background-macos-sierra-stock-5120x2880-1328.jpg}" alt=""/>
+
+<div class="divPos"> <!--th:style=" 'margin-left: 100px;'">-->
+    <table class="table table-striped">
+        <div>
+            <div th:each="Element:${GadgetModelList}">
+                <tr>
+                    <td class="ButtonName Possition " th:text="${Element.name}"></td>
+
+                    <td class="ButtonMAh Possition" th:text="${Element.mAh}"></td>
+
+                    <td class="ButtonTypeScreen Possition" th:text="${Element.TypeScreen}"></td>
+
+                    <td class="ButtonHz Possition" th:text="${Element.Hz}"></td>
+
+                    <td class="ButtonNameProcessor Possition" th:text="${Element.ProcessorName}"></td>
+
+                    <td class="ButtonGHz Possition" th:text="${Element.GHz}"></td>
+                </tr>
+            </div>
+        </div>
+    </table>
+</div>
+
+
+</body>
+</html>
